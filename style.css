@@ -1,0 +1,39 @@
+:root {
+    --primary: #6e6bd1;
+    --text-dark: #2d3436;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; overflow: hidden; } /* Ẩn thanh cuộn chính */
+
+/* Tạo vùng chứa cuộn snap */
+.container-snap {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory; /* Bắt buộc dừng tại mỗi phần */
+    scroll-behavior: smooth;
+}
+
+/* Định nghĩa mỗi trang */
+.page {
+    height: 100vh;
+    width: 100%;
+    scroll-snap-align: start; /* Dừng ở đầu mỗi trang */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 10%; /* Chừa chỗ cho navbar */
+}
+
+.page-content { width: 100%; }
+
+/* Layout Grid cho từng trang */
+.grid-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+
+/* Navbar */
+.navbar {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1rem 10%; position: fixed; width: 100%; top: 0;
+    background: rgba(255, 255, 255, 0.9); z-index: 1000;
+}
+/* ... giữ lại các CSS khác như nút bấm, badge từ bản trước ... */

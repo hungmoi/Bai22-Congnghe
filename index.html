@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài 22: Điện Tử Số</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Bài 22: Mạch Xử Lý Tín Hiệu</title>
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav class="navbar">
-        <div class="logo">Công nghệ</div>
+        <div class="logo">Công nghệ 12</div>
         <ul class="nav-links">
             <li><a href="#home" class="active">Trang Chủ</a></li>
             <li><a href="#phan1">I. Mạch Tổ Hợp</a></li>
             <li><a href="#phan2">II. Mạch Dãy</a></li>
-            <li><a href="#game">Trò Chơi</a></li>
         </ul>
         <div class="theme-switch-wrapper">
             <label class="theme-switch" for="checkbox">
@@ -30,7 +29,7 @@
             <div class="page-content">
                 <h1 class="animate-pop">Bài 22</h1>
                 <p class="subtitle">Một số mạch xử lý tín hiệu trong điện tử số</p>
-                <a href="#phan1" class="btn-start">Bắt Đầu Học</a>
+                <a href="#phan1" class="btn-start">Tìm Hiểu</a>
             </div>
         </section>
 
@@ -39,10 +38,29 @@
                 <div class="text-side">
                     <span class="badge">Phần 1</span>
                     <h2>I. Mạch Logic Tổ Hợp</h2>
-                    <p>Khái niệm: Lối ra chỉ phụ thuộc vào đầu vào hiện tại.</p>
+                    <p><strong>Khái niệm:</strong> Là mạch được tạo thành từ các cổng logic cơ bản, trạng thái lối ra của mạch tại một thời điểm bất kì <strong>chỉ phụ thuộc</strong> vào tổ hợp các trạng thái logic ở lối vào tại thời điểm hiện tại.</p>
+                    <p><strong>Các mạch logic tổ hợp bao gồm:</strong></p>
+                    <ul>
+                        <li>Các mạch số học (cộng, trừ,...).</li>
+                        <li>Các bộ hợp kênh, phân kênh.</li>
+                        <li>Các bộ mã hoá, giải mã.</li>
+                        <li>Các mạch so sánh.</li>
+                        <li>Các bộ khoá, điều khiển logic,...</li>
+                    </ul>
+                    
+                    <h3>1. Mạch so sánh hai số (1 bit)</h3>
+                    <ul>
+                        <li>Nếu A = B thì lối ra C = 1.</li>
+                        <li>Nếu A ≠ B thì lối ra C = 0.</li>
+                        <li>Phương trình logic: $C = \bar{A}\bar{B} + AB$.</li>
+                    </ul>
                 </div>
                 <div class="img-side">
+                    <img src="assets/hinh22-1.jpg" alt="Sơ đồ khối mạch logic tổ hợp" style="max-width: 100%; height: auto; border-radius: 10px;">
+                    <p style="text-align: center; font-size: 0.9rem; color: #666;">Hình 22.1: Sơ đồ khối bộ so sánh</p>
                     
+                    <img src="assets/hinh22-3.jpg" alt="Sơ đồ mạch so sánh" style="max-width: 100%; height: auto; border-radius: 10px; margin-top: 20px;">
+                    <p style="text-align: center; font-size: 0.9rem; color: #666;">Hình 22.3: Sơ đồ mạch so sánh hai số</p>
                 </div>
             </div>
         </section>
@@ -52,26 +70,27 @@
                 <div class="text-side">
                     <span class="badge">Phần 2</span>
                     <h2>II. Mạch Dãy</h2>
-                    <p>Khái niệm: Lối ra phụ thuộc vào đầu vào hiện tại và trạng thái quá khứ (cần bộ nhớ).</p>
+                    <p><strong>Khái niệm:</strong> Là mạch được tạo thành từ các cổng logic cơ bản, trạng thái lối ra của mạch không chỉ phụ thuộc vào tổ hợp các trạng thái logic ở lối vào ở thời điểm hiện tại mà còn phụ thuộc vào <strong>trạng thái logic ở lối ra của nó tại thời điểm trước đó</strong>.</p>
+                    <p><strong>Các mạch dãy bao gồm:</strong></p>
+                    <ul>
+                        <li>Các phần tử nhớ.</li>
+                        <li>Các Flip-Flop (Trigger).</li>
+                        <li>Các bộ đếm.</li>
+                        <li>Các bộ ghi dịch.</li>
+                        <li>Các bộ chia tần.</li>
+                    </ul>
+                    <h3>1. Mạch đếm</h3>
+                    <p>Mạch đếm nhị phân là thành phần cơ bản của hệ thống số, dùng để đếm số xung, chia tần số.</p>
                 </div>
                 <div class="img-side">
-                    
+                    <img src="assets/hinh22-4.jpg" alt="Sơ đồ khối mạch dãy" style="max-width: 100%; height: auto; border-radius: 10px;">
+                    <p style="text-align: center; font-size: 0.9rem; color: #666;">Hình 22.4: Sơ đồ khối mạch dãy</p>
                 </div>
             </div>
         </section>
         
-        <section id="game" class="page grey-bg">
-            <div class="page-content">
-                <h2>Trò Chơi Ô Chữ</h2>
-                <div class="quiz-box">
-                    <p>Mạch dãy cần thành phần gì để hoạt động?</p>
-                    <button onclick="check(true)">Bộ nhớ</button>
-                    <button onclick="check(false)">Điện trở</button>
-                </div>
-            </div>
-        </section>
     </div>
 
-    <script src="script.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

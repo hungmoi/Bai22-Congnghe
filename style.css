@@ -53,15 +53,17 @@ nav{
 /* Submenu */
 
 .submenu{
+   .submenu{
     position:absolute;
-    top:30px;
+    top:100%;
     left:0;
-    background:#1a1a1a;
+    background:#222;
     padding:10px 0;
-    border-radius:10px;
     display:none;
     flex-direction:column;
     min-width:150px;
+    border-radius:8px;
+}
 }
 
 .submenu a{

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Học Công Nghệ</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:#000;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* NAV */
+
+nav{
+    position:fixed;
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    backdrop-filter:blur(10px);
+    background:rgba(0,0,0,0.4);
+}
+
+nav h1{
+    font-weight:800;
+    font-size:22px;
+    letter-spacing:2px;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:400;
+    transition:0.3s;
+}
+
+nav a:hover{
+    opacity:0.6;
+}
+
+/* HERO */
+
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(120deg,#000,#111,#1a1a1a);
+}
+
+.hero h2{
+    font-size:60px;
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    opacity:0.7;
+    max-width:700px;
+}
+
+.btn{
+    margin-top:30px;
+    padding:15px 40px;
+    border-radius:40px;
+    background:white;
+    color:black;
+    font-weight:600;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* SECTION */
+
+.section{
+    padding:120px 8%;
+    text-align:center;
+}
+
+.section h3{
+    font-size:40px;
+    margin-bottom:40px;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:#111;
+    padding:40px;
+    width:300px;
+    border-radius:20px;
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    background:#1f1f1f;
+}
+
+.card h4{
+    margin-bottom:20px;
+}
+
+/* FOOTER */
+
+footer{
+    padding:40px;
+    text-align:center;
+    background:#111;
+    opacity:0.6;
+}
+
+@media(max-width:768px){
+    .hero h2{
+        font-size:40px;
+    }
+    .cards{
+        flex-direction:column;
+        align-items:center;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h1>TECH EDU</h1>
+    <ul>
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#">Bài học</a></li>
+        <li><a href="#">Liên hệ</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <h2>Tương Lai Thuộc Về Công Nghệ</h2>
+    <p>Khám phá kiến thức công nghệ hiện đại với giao diện chuẩn quốc tế, trải nghiệm mượt mà như website Apple.</p>
+    <a href="#" class="btn">Bắt đầu học</a>
+</section>
+
+<section class="section">
+    <h3>Các Chủ Đề Chính</h3>
+    <div class="cards">
+        <div class="card">
+            <h4>Lập Trình</h4>
+            <p>HTML, CSS, JavaScript, Python và nhiều hơn nữa.</p>
+        </div>
+        <div class="card">
+            <h4>AI & Công Nghệ</h4>
+            <p>Trí tuệ nhân tạo, Machine Learning, xu hướng tương lai.</p>
+        </div>
+        <div class="card">
+            <h4>Thiết Kế Web</h4>
+            <p>Thiết kế UI/UX chuẩn hiện đại, responsive.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © 2026 TECH EDU. All rights reserved.
+</footer>
+
+</body>
+</html>

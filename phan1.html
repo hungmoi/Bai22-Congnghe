@@ -2,6 +2,7 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Phần I – Mạch logic tổ hợp</title>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -17,9 +18,9 @@
             <li class="dropdown-parent">
                 <a href="phan1.html">Phần I</a>
                 <ul class="dropdown">
-                    <li><a href="phan1.html#khainiem">Khái niệm</a></li>
-                    <li><a href="phan1.html#machtohop">Mạch tổ hợp</a></li>
-                    <li><a href="phan1.html#sosanh">Mạch so sánh</a></li>
+                    <li><a href="#khainiem">Khái niệm</a></li>
+                    <li><a href="#machtohop">Mạch tổ hợp</a></li>
+                    <li><a href="#sosanh">Mạch so sánh</a></li>
                 </ul>
             </li>
 
@@ -36,15 +37,21 @@
         </ul>
     </div>
 </nav>
-<article class="lesson-content">
 
-    <!-- PHẦN 1 -->
-    <section class="content-section">
-        <h2>1. Khái niệm mạch logic tổ hợp</h2>
+<div class="lesson-container">
 
-        <div class="example-box">
-            <div class="example-header">💡 Khái niệm</div>
-            <div class="example-content">
+    <div class="lesson-header">
+        <h1>Phần I – Mạch logic tổ hợp</h1>
+        <div class="lesson-meta">Chương trình Công nghệ – Hệ thống số</div>
+    </div>
+
+    <article class="lesson-content">
+
+        <!-- PHẦN 1 -->
+        <section class="content-section" id="khainiem">
+            <h2>1. Khái niệm mạch logic tổ hợp</h2>
+
+            <div class="example-box">
                 <p>
                     Mạch logic tổ hợp là mạch được tạo thành từ các cổng logic cơ bản.
                     Trạng thái đầu ra tại một thời điểm bất kỳ chỉ phụ thuộc vào tổ hợp
@@ -52,59 +59,65 @@
                     trạng thái trước đó.
                 </p>
             </div>
-        </div>
 
-        <div class="content-split">
-            <div class="content-split-text">
-                <h3>Các loại mạch logic tổ hợp</h3>
-                <ul>
-                    <li>Các mạch số học (cộng, trừ nhị phân)</li>
-                    <li>Bộ hợp kênh (MUX), phân kênh (DEMUX)</li>
-                    <li>Bộ mã hóa (Encoder), giải mã (Decoder)</li>
-                    <li>Mạch so sánh</li>
-                    <li>Bộ khóa và điều khiển logic</li>
-                </ul>
+            <div class="content-split">
+                <div>
+                    <h3>Các loại mạch logic tổ hợp</h3>
+                    <ul>
+                        <li>Các mạch số học (cộng, trừ nhị phân)</li>
+                        <li>Bộ hợp kênh (MUX), phân kênh (DEMUX)</li>
+                        <li>Bộ mã hóa (Encoder), giải mã (Decoder)</li>
+                        <li>Mạch so sánh</li>
+                        <li>Bộ khóa và điều khiển logic</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <img src="22.1.png" alt="Mạch logic tổ hợp">
+                </div>
             </div>
+        </section>
 
-            <div class="content-split-image">
-                <img src="22.1.png" alt="Mạch logic tổ hợp">
-            </div>
-        </div>
-    </section>
+        <!-- PHẦN 2 -->
+        <section class="content-section" id="sosanh">
+            <h2>2. Mạch so sánh hai số</h2>
 
-    <!-- PHẦN 2 -->
-    <section class="content-section">
-        <h2>2. Mạch so sánh hai số</h2>
-
-        <div class="example-box">
-            <div class="example-header">📘 Chức năng</div>
-            <div class="example-content">
+            <div class="example-box">
                 <p>
                     Mạch so sánh hai số dùng để xác định hai giá trị nhị phân có bằng nhau
                     hay không, hoặc số nào lớn hơn.
                 </p>
             </div>
-        </div>
 
-        <div class="content-split">
-            <div class="content-split-text">
-                <h3>Cấu tạo cơ bản</h3>
-                <ul>
-                    <li>Hai cổng NOT</li>
-                    <li>Hai cổng AND</li>
-                    <li>Một cổng OR</li>
-                </ul>
+            <div class="content-split">
+                <div>
+                    <h3>Cấu tạo cơ bản</h3>
+                    <ul>
+                        <li>Hai cổng NOT</li>
+                        <li>Hai cổng AND</li>
+                        <li>Một cổng OR</li>
+                    </ul>
 
-                <p>
-                    Các cổng logic này phối hợp để tạo ra tín hiệu đầu ra phản ánh
-                    mối quan hệ giữa hai đầu vào.
-                </p>
+                    <p>
+                        Các cổng logic này phối hợp để tạo ra tín hiệu đầu ra phản ánh
+                        mối quan hệ giữa hai đầu vào.
+                    </p>
+                </div>
+
+                <div>
+                    <img src="22.3.png" alt="Mạch so sánh hai số">
+                </div>
             </div>
+        </section>
 
-            <div class="content-split-image">
-                <img src="22.3.png" alt="Mạch so sánh hai số">
-            </div>
-        </div>
-    </section>
+    </article>
 
-</article>
+</div>
+
+<footer class="footer">
+© 2026 Công nghệ số
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -2,34 +2,190 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>Trò chơi</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trò Chơi Củng Cố</title>
 <link rel="stylesheet" href="style.css">
+
+<style>
+.game-wrapper{
+    max-width:900px;
+    margin:120px auto 60px;
+    padding:20px;
+}
+
+.question-box{
+    background:#fff;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.question-box h2{
+    margin-bottom:20px;
+}
+
+.answers button{
+    display:block;
+    width:100%;
+    margin:10px 0;
+    padding:12px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    background:#f2f2f2;
+    transition:0.3s;
+}
+
+.answers button:hover{
+    background:#e0e0e0;
+}
+
+.correct{background:#c8f7c5 !important;}
+.wrong{background:#ffc9c9 !important;}
+
+.controls{
+    margin-top:20px;
+    text-align:center;
+}
+
+.controls button{
+    padding:10px 20px;
+    margin:5px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    background:black;
+    color:white;
+}
+.result{
+    text-align:center;
+    margin-top:20px;
+    font-weight:bold;
+}
+</style>
 </head>
+
 <body>
 
-<nav>
-  <div class="logo">CÔNG NGHỆ 12</div>
-  <ul class="menu">
-    <li><a href="index.html">Trang chủ</a></li>
-
-    <li>
-      <a href="#" class="active">Bài học</a>
-      <ul class="submenu">
-        <li><a href="phan1.html">Phần I</a></li>
-        <li><a href="phan2.html">Phần II</a></li>
-        <li><a href="game.html" class="active">Trò chơi</a></li>
-      </ul>
-    </li>
-  </ul>
+<nav class="navbar">
+    <div class="nav-brand">Công nghệ</div>
+    <ul class="nav-links">
+        <li><a href="../index.html">Trang Chủ</a></li>
+        <li><a href="part1.html">Phần I</a></li>
+        <li><a href="part2.html">Phần II</a></li>
+        <li><a href="game.html" class="active">Trò Chơi</a></li>
+    </ul>
 </nav>
 
-<section>
-  <h1>Trò chơi ôn tập</h1>
-</section>
+<div class="game-wrapper">
+    <div class="question-box">
+        <h2 id="question">Câu hỏi</h2>
+        <div class="answers" id="answers"></div>
+        <div class="controls">
+            <button onclick="prevQuestion()">Câu trước</button>
+            <button onclick="nextQuestion()">Câu sau</button>
+            <button onclick="submitQuiz()">Nộp bài</button>
+        </div>
+        <div class="result" id="result"></div>
+    </div>
+</div>
 
-<footer>
-© 2026 Công Nghệ 12
-</footer>
+<script>
+const questions = [
+{
+question:"Mạch logic tổ hợp có đặc điểm gì?",
+answers:["Phụ thuộc trạng thái trước","Chỉ phụ thuộc đầu vào hiện tại","Có bộ nhớ","Có xung clock"],
+correct:1
+},
+{
+question:"Cổng AND cho đầu ra bằng 1 khi:",
+answers:["Một đầu vào bằng 1","Cả hai đầu vào bằng 1","Hai đầu vào khác nhau","Tất cả bằng 0"],
+correct:1
+},
+{
+question:"Cổng NOT có chức năng:",
+answers:["Giữ nguyên","Đảo trạng thái","Cộng tín hiệu","So sánh"],
+correct:1
+},
+{
+question:"Cổng OR cho đầu ra bằng 1 khi:",
+answers:["Tất cả bằng 1","Ít nhất một bằng 1","Tất cả bằng 0","Hai đầu vào khác nhau"],
+correct:1
+},
+{
+question:"Cổng NAND là:",
+answers:["AND + NOT","OR + NOT","XOR + NOT","AND + OR"],
+correct:0
+},
+{
+question:"Biểu thức A + B tương ứng cổng:",
+answers:["AND","OR","NOT","NAND"],
+correct:1
+},
+{
+question:"Mạch so sánh 1 bit dùng để:",
+answers:["Lưu dữ liệu","So sánh 2 giá trị nhị phân","Đảo tín hiệu","Khuếch đại"],
+correct:1
+},
+{
+question:"Đầu ra mạch tổ hợp thay đổi khi:",
+answers:["Nguồn yếu","Có clock","Đầu vào thay đổi","Có bộ nhớ"],
+correct:2
+}
+];
+
+let current=0;
+let score=0;
+let selected=[];
+
+function loadQuestion(){
+document.getElementById("question").innerText=
+"Câu "+(current+1)+": "+questions[current].question;
+
+const answersDiv=document.getElementById("answers");
+answersDiv.innerHTML="";
+questions[current].answers.forEach((ans,i)=>{
+let btn=document.createElement("button");
+btn.innerText=ans;
+btn.onclick=()=>selectAnswer(i,btn);
+answersDiv.appendChild(btn);
+});
+}
+
+function selectAnswer(i,btn){
+if(selected[current]!=null) return;
+selected[current]=i;
+
+if(i===questions[current].correct){
+btn.classList.add("correct");
+score++;
+}else{
+btn.classList.add("wrong");
+}
+}
+
+function nextQuestion(){
+if(current<questions.length-1){
+current++;
+loadQuestion();
+}
+}
+
+function prevQuestion(){
+if(current>0){
+current--;
+loadQuestion();
+}
+}
+
+function submitQuiz(){
+document.getElementById("result").innerText=
+"Bạn đúng "+score+"/"+questions.length+" câu.";
+}
+
+loadQuestion();
+</script>
 
 </body>
 </html>

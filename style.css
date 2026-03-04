@@ -10,13 +10,14 @@ body{
   color:white;
 }
 
-/* NAVIGATION */
+/* NAV */
 nav{
   display:flex;
   justify-content:space-between;
   align-items:center;
   padding:20px 60px;
-  background:rgba(0,0,0,0.9);
+  background:rgba(0,0,0,0.95);
+  position:relative;
 }
 
 .logo{
@@ -38,11 +39,19 @@ nav{
   text-decoration:none;
   color:white;
   font-size:16px;
+  padding:5px 0;
   transition:0.3s;
 }
 
 .menu a:hover{
   color:#00c3ff;
+}
+
+/* ACTIVE PAGE */
+.menu a.active{
+  color:#00c3ff;
+  font-weight:bold;
+  border-bottom:2px solid #00c3ff;
 }
 
 /* SUBMENU */
@@ -52,7 +61,7 @@ nav{
   top:100%;
   left:0;
   background:#111;
-  min-width:180px;
+  min-width:200px;
   border-radius:8px;
   padding:10px 0;
   z-index:1000;
@@ -71,11 +80,11 @@ nav{
   background:#222;
 }
 
-.dropdown:hover .submenu{
+.menu li:hover .submenu{
   display:block;
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero{
   height:90vh;
   display:flex;
@@ -83,7 +92,6 @@ nav{
   justify-content:center;
   align-items:center;
   text-align:center;
-  background:linear-gradient(to bottom, #000, #111);
 }
 
 .hero h1{
@@ -92,9 +100,8 @@ nav{
 }
 
 .hero p{
-  font-size:18px;
-  margin-bottom:30px;
   color:#aaa;
+  margin-bottom:30px;
 }
 
 .btn{
@@ -104,7 +111,6 @@ nav{
   text-decoration:none;
   border-radius:30px;
   font-weight:bold;
-  transition:0.3s;
 }
 
 .btn:hover{
@@ -112,20 +118,19 @@ nav{
 }
 
 /* CONTENT */
-.content{
+section{
   padding:80px 100px;
-  text-align:center;
 }
 
-.content h2{
-  font-size:32px;
-  margin-bottom:20px;
+h1{
+  margin-bottom:30px;
 }
 
-.content p{
-  max-width:800px;
-  margin:auto;
-  color:#bbb;
+.card{
+  background:#111;
+  padding:30px;
+  border-radius:12px;
+  margin-top:20px;
 }
 
 /* FOOTER */
@@ -134,5 +139,4 @@ footer{
   padding:30px;
   background:#111;
   color:#777;
-  font-size:14px;
 }

@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phần II</title>
+    <title>Phần II | Công nghệ</title>
 
-    <!-- CSS cùng thư mục -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar">
     <div class="nav-container">
-        <div class="nav-logo">Công nghệ</div>
+
+        <div class="nav-logo">
+            <a href="index.html">Công nghệ</a>
+        </div>
 
         <ul class="nav-menu">
             <li><a href="index.html">Trang Chủ</a></li>
@@ -27,28 +30,32 @@
                 </ul>
             </li>
 
-            <li class="dropdown-parent">
+            <li class="dropdown-parent active">
                 <a href="phan2.html">Phần II</a>
                 <ul class="dropdown">
-                    <li><a href="phan2.html#machday">Mạch dãy</a></li>
-                    <li><a href="phan2.html#flipflop">Flip-Flop</a></li>
-                    <li><a href="phan2.html#machdem">Mạch đếm</a></li>
+                    <li><a href="#machday">Mạch dãy</a></li>
+                    <li><a href="#flipflop">Flip-Flop</a></li>
+                    <li><a href="#machdem">Mạch đếm</a></li>
                 </ul>
             </li>
 
             <li><a href="game.html">Trò Chơi</a></li>
         </ul>
+
     </div>
 </nav>
+
+<!-- CONTENT -->
 <main class="lesson-container">
 
     <div class="lesson-header">
-        <h1>Mạch dãy</h1>
+        <h1>Phần II – Mạch dãy</h1>
     </div>
 
     <article class="lesson-content">
 
-        <section class="content-section">
+        <!-- SECTION 1 -->
+        <section class="content-section" id="machday">
             <h2>1. Khái niệm mạch dãy</h2>
 
             <div class="example-box">
@@ -76,28 +83,26 @@
             </div>
         </section>
 
-
+        <!-- SECTION 2 -->
         <section class="content-section">
             <h2>2. Mạch đếm</h2>
 
             <div class="example-box">
-                <h3>Flip-Flop (FF)</h3>
+                <h3 id="flipflop">Flip-Flop (FF)</h3>
                 <p>
                     Flip-Flop là phần tử nhớ có hai trạng thái ổn định,
                     tương ứng với logic 0 và 1.
                 </p>
-
                 <img src="22.7.png" alt="Flip Flop">
             </div>
 
             <div class="example-box">
-                <h3>Mạch đếm nhị phân dùng Flip-Flop D</h3>
+                <h3 id="machdem">Mạch đếm nhị phân dùng Flip-Flop D</h3>
                 <p>
                     Là thành phần cơ bản của hệ thống số,
                     dùng để đếm xung và chia tần số tạo xung thời gian
                     trong máy tính và các thiết bị thông tin.
                 </p>
-
                 <img src="22.9.png" alt="Mạch đếm nhị phân">
             </div>
 
@@ -106,6 +111,8 @@
     </article>
 
 </main>
+
+<script src="script.js"></script>
 
 </body>
 </html>

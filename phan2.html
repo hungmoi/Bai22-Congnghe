@@ -1,38 +1,94 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<title>Phần II – Mạch logic tuần tự</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phần II</title>
+
+    <!-- CSS cùng thư mục -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<nav>
-  <div class="logo">CÔNG NGHỆ</div>
-
-  <ul class="menu">
-    <li><a href="index.html">Trang Chủ</a></li>
-    <li>
-      <a href="#" class="active">Bài học</a>
-      <ul class="submenu">
-        <li><a href="phan1.html">Phần I</a></li>
-        <li><a href="phan2.html" class="active">Phần II</a></li>
-        <li><a href="game.html">Trò chơi</a></li>
-      </ul>
-    </li>
-  </ul>
+<nav class="navbar">
+    <div class="nav-brand">
+        <span class="brand-text">Công nghệ</span>
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Trang Chủ</a></li>
+        <li><a href="part1.html" class="nav-link">Phần I</a></li>
+        <li><a href="part2.html" class="nav-link active">Phần II</a></li>
+        <li><a href="game.html" class="nav-link">Trò Chơi</a></li>
+    </ul>
 </nav>
 
-<section class="section">
-  <h2>Mạch logic tuần tự</h2>
-  <div class="card">
-    <p>Mạch logic tuần tự là mạch có đầu ra phụ thuộc vào đầu vào và trạng thái trước đó.</p>
-  </div>
-</section>
+<main class="lesson-container">
 
-<footer>
-© 2026 Công Nghệ 12
-</footer>
+    <div class="lesson-header">
+        <h1>Mạch dãy</h1>
+    </div>
+
+    <article class="lesson-content">
+
+        <section class="content-section">
+            <h2>1. Khái niệm mạch dãy</h2>
+
+            <div class="example-box">
+                <p>
+                    Mạch dãy là mạch được tạo thành từ các cổng logic cơ bản,
+                    trong đó trạng thái đầu ra không chỉ phụ thuộc vào đầu vào
+                    hiện tại mà còn phụ thuộc vào trạng thái trước đó của mạch.
+                </p>
+            </div>
+
+            <div class="content-split">
+                <div>
+                    <h3>Phân loại</h3>
+                    <ul>
+                        <li>Các phần tử nhớ</li>
+                        <li>Flip-Flop</li>
+                        <li>Bộ đếm</li>
+                        <li>Bộ ghi dịch</li>
+                        <li>Bộ chia tần</li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="22.4.png" alt="Mạch dãy">
+                </div>
+            </div>
+        </section>
+
+
+        <section class="content-section">
+            <h2>2. Mạch đếm</h2>
+
+            <div class="example-box">
+                <h3>Flip-Flop (FF)</h3>
+                <p>
+                    Flip-Flop là phần tử nhớ có hai trạng thái ổn định,
+                    tương ứng với logic 0 và 1.
+                </p>
+
+                <img src="22.7.png" alt="Flip Flop">
+            </div>
+
+            <div class="example-box">
+                <h3>Mạch đếm nhị phân dùng Flip-Flop D</h3>
+                <p>
+                    Là thành phần cơ bản của hệ thống số,
+                    dùng để đếm xung và chia tần số tạo xung thời gian
+                    trong máy tính và các thiết bị thông tin.
+                </p>
+
+                <img src="22.9.png" alt="Mạch đếm nhị phân">
+            </div>
+
+        </section>
+
+    </article>
+
+</main>
 
 </body>
 </html>

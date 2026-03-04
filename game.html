@@ -69,15 +69,32 @@
 <body>
 
 <nav class="navbar">
-    <div class="nav-brand">Công nghệ</div>
-    <ul class="nav-links">
-        <li><a href="index.html">Trang Chủ</a></li>
-        <li><a href="phan1.html">Phần I</a></li>
-        <li><a href="phan2.html">Phần II</a></li>
-        <li><a href="game.html" class="active">Trò Chơi</a></li>
-    </ul>
-</nav>
+    <div class="nav-container">
+        <div class="nav-logo">Công nghệ</div>
 
+        <ul class="nav-menu">
+            <li><a href="index.html">Trang Chủ</a></li>
+
+            <li class="has-dropdown">
+                <a href="#">Bài Học</a>
+                <ul class="dropdown">
+                    <li><a href="phan1.html">Phần I</a></li>
+
+                    <li class="has-submenu">
+                        <a href="#">Phần II ▸</a>
+                        <ul class="submenu">
+                            <li><a href="phan2.html">Mạch dãy</a></li>
+                            <li><a href="phan2.html">Flip-Flop</a></li>
+                            <li><a href="phan2.html">Mạch đếm</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li><a href="game.html">Trò Chơi</a></li>
+        </ul>
+    </div>
+</nav>
 <div class="game-wrapper">
     <div class="question-box">
         <h2 id="question">Câu hỏi</h2>

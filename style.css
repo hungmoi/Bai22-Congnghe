@@ -1,5 +1,5 @@
 /* ===============================
-   PREMIUM APPLE-STYLE DESIGN
+   PREMIUM MODERN MINIMAL DESIGN
 ================================= */
 
 *{
@@ -8,13 +8,25 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display",
-                 "Helvetica Neue", Arial, sans-serif;
-    background:#f5f5f7;
+    font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+    background:#ffffff;
     color:#1d1d1f;
     line-height:1.75;
-    letter-spacing:-0.2px;
+}
+
+/* ===== GLOBAL BACKGROUND SECTIONS ===== */
+
+.section-light{
+    background:#ffffff;
+}
+
+.section-gray{
+    background:#f5f5f7;
 }
 
 /* ===== NAVBAR ===== */
@@ -24,8 +36,8 @@ body{
     top:0;
     width:100%;
     height:70px;
-    background:rgba(255,255,255,0.75);
-    backdrop-filter:blur(20px);
+    background:rgba(255,255,255,0.8);
+    backdrop-filter:blur(25px);
     border-bottom:1px solid rgba(0,0,0,0.06);
     z-index:1000;
 }
@@ -35,14 +47,14 @@ body{
     margin:auto;
     height:100%;
     display:flex;
-    align-items:center;
     justify-content:space-between;
+    align-items:center;
     padding:0 40px;
 }
 
 .nav-logo{
-    font-size:18px;
     font-weight:600;
+    font-size:18px;
 }
 
 .nav-menu{
@@ -59,8 +71,7 @@ body{
     text-decoration:none;
     color:#1d1d1f;
     font-size:15px;
-    font-weight:400;
-    transition:0.3s ease;
+    transition:0.3s;
 }
 
 .nav-menu a:hover{
@@ -69,163 +80,142 @@ body{
 
 /* ===== DROPDOWN ===== */
 
-.dropdown,
-.submenu{
+.dropdown{
     position:absolute;
-    top:35px;
+    top:40px;
     left:0;
-    background:white;
-    padding:20px;
+    background:#fff;
     border-radius:16px;
-    box-shadow:0 20px 60px rgba(0,0,0,0.08);
+    box-shadow:0 25px 80px rgba(0,0,0,0.08);
     display:none;
     min-width:220px;
+    padding:10px 0;
 }
 
-.dropdown li,
-.submenu li{
-    margin-bottom:10px;
+.dropdown a{
+    display:block;
+    padding:12px 20px;
+    font-size:14px;
 }
 
-.dropdown li:last-child,
-.submenu li:last-child{
-    margin-bottom:0;
+.dropdown a:hover{
+    background:#f5f5f7;
 }
 
-.has-dropdown:hover .dropdown{
+.dropdown-parent.active .dropdown{
     display:block;
 }
 
-.has-submenu{
-    position:relative;
+/* ===== PAGE CONTAINER ===== */
+
+.page{
+    margin-top:140px;
 }
 
-.has-submenu .submenu{
-    top:0;
-    left:200px;
+/* ===== HERO ===== */
+
+.hero{
+    padding:180px 20px 120px;
+    text-align:center;
+    background:linear-gradient(to bottom,#ffffff,#f5f5f7);
 }
 
-.has-submenu:hover .submenu{
-    display:block;
-}
-
-/* ===== MAIN CONTENT ===== */
-
-.lesson-container{
-    max-width:1000px;
-    margin:140px auto 100px;
-    padding:0 30px;
-}
-
-.lesson-header{
-    margin-bottom:80px;
-}
-
-.lesson-header h1{
-    font-size:48px;
+.hero h1{
+    font-size:60px;
     font-weight:600;
     margin-bottom:20px;
 }
 
-.lesson-meta{
+.hero p{
+    font-size:20px;
     color:#6e6e73;
-    font-size:15px;
+    max-width:700px;
+    margin:auto;
 }
 
-/* ===== SECTION ===== */
+/* ===== CONTENT SECTIONS ===== */
 
 .content-section{
-    margin-bottom:100px;
+    padding:120px 20px;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
 }
 
 .content-section h2{
-    font-size:28px;
+    font-size:34px;
     font-weight:600;
-    margin-bottom:30px;
+    margin-bottom:40px;
+    text-align:center;
 }
 
 .content-section h3{
-    font-size:20px;
+    font-size:22px;
     font-weight:500;
     margin-bottom:15px;
-}
-
-.content-section h4{
-    font-size:17px;
-    font-weight:400;
-    margin-bottom:8px;
-    color:#3a3a3c;
 }
 
 .content-section p{
     font-size:17px;
     color:#3a3a3c;
-    margin-bottom:20px;
+}
+
+/* ===== SPLIT LAYOUT (APPLE STYLE) ===== */
+
+.split{
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    gap:80px;
+    align-items:center;
+}
+
+.split.reverse{
+    grid-template-columns:1fr 1.2fr;
+}
+
+.split img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 30px 80px rgba(0,0,0,0.08);
 }
 
 /* ===== CARD ===== */
 
-.example-box{
-    background:#ffffff;
-    padding:35px;
-    border-radius:18px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.05);
-    margin-bottom:50px;
-    transition:0.3s ease;
+.card{
+    background:#fff;
+    padding:40px;
+    border-radius:22px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.05);
+    margin-bottom:60px;
+    transition:0.3s;
 }
 
-.example-box:hover{
-    transform:translateY(-5px);
-    box-shadow:0 25px 60px rgba(0,0,0,0.08);
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 30px 80px rgba(0,0,0,0.08);
 }
 
-/* ===== SPLIT LAYOUT ===== */
+/* ===== FOOTER ===== */
 
-.content-split{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
-}
-
-.content-split img{
-    width:100%;
-    border-radius:16px;
-    box-shadow:0 20px 40px rgba(0,0,0,0.08);
-}
-
-/* ===== FOOTER NAV ===== */
-
-.lesson-navigation{
-    display:flex;
-    justify-content:space-between;
-    margin-top:80px;
-}
-
-.nav-btn{
-    text-decoration:none;
-    font-size:15px;
-    font-weight:500;
-    color:#0071e3;
-}
-
-.nav-btn:hover{
-    text-decoration:underline;
+.footer{
+    padding:60px;
+    text-align:center;
+    background:#f5f5f7;
+    font-size:14px;
+    color:#6e6e73;
 }
 
 /* ===== RESPONSIVE ===== */
 
 @media(max-width:900px){
-
-    .content-split{
+    .split{
         grid-template-columns:1fr;
+        gap:40px;
     }
 
-    .nav-menu{
-        gap:20px;
-    }
-
-    .lesson-header h1{
-        font-size:36px;
+    .hero h1{
+        font-size:42px;
     }
 }
